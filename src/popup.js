@@ -11,11 +11,11 @@ $('.switch-input').click(function() {
     setValueToChromStorage(switchName, option);
 });
 
-var showInTableSwitch = 'show-in-table-switch';
+var showInCalendarSwitch = 'show-in-calendar-switch';
 var showInPopupSwitch = 'show-in-popup-switch';
 
 $(function () {
-    setSwitchOption(showInTableSwitch, 0);
+    setSwitchOption(showInCalendarSwitch, 0);
     setSwitchOption(showInPopupSwitch, 1);
     $('body').removeAttr('style');
 });

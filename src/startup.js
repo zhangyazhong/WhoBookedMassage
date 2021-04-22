@@ -1,4 +1,4 @@
-var showInTableSwitch = 'show-in-table-switch';
+var showInCalendarSwitch = 'show-in-calendar-switch';
 var showInPopupSwitch = 'show-in-popup-switch';
 
 $(function() {
@@ -18,8 +18,8 @@ $(function() {
 
     eventsObj.forEach(eventObj => console.log(eventObj));
 
-    chrome.storage.local.get(showInTableSwitch, function (result) {
-        let option = parseInt(result[showInTableSwitch] === undefined ? 0 : result[showInTableSwitch]);
+    chrome.storage.local.get(showInCalendarSwitch, function (result) {
+        let option = parseInt(result[showInCalendarSwitch] === undefined ? 0 : result[showInCalendarSwitch]);
         if (option === 1) {
             eventsRaw.forEach(eventRaw => {
                 var id = getPropertyFromEventRaw(eventRaw, 'id');
@@ -48,7 +48,7 @@ $(function() {
                 let eventObj = getEventById(eventsObj, eventId);
                 tooltips.push({
                     'eventId': eventId,
-                    'tooltip': new mdb.Tooltip($(this)[0], { title: 'Reserved by ' + eventObj.alias, trigger: 'manual' })
+                    'tooltip': new mdb.Tooltip($(this)[0], { title: 'Reserved for ' + eventObj.alias, trigger: 'manual' })
                 });
             });
             $('.chip.cbrd').mouseenter(function(e) {

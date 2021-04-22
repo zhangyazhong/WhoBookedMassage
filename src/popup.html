@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="vendor/all.min.css" />
+        <link rel="stylesheet" href="vendor/fonts.googleapis.css" />
+        <link rel="stylesheet" href="vendor/mdb.min.css" />
+        <style>
+            * {
+                font-size: 16px;
+                margin: 0;
+                padding: 0;
+            }
+            html {
+                width: 350px;
+            }
+            body {
+                width: 340px;
+                margin-top: 5px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+            }
+            hr {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                border: 0;
+                border-bottom: 1px #C0C0C0 solid;
+            }
+            .option {
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            .option:hover {
+                background-color: RGB(238, 238, 238);
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body style="visibility: hidden;">
+        <div id="container" style="width: 100%">
+            <div id="homepage" class="option">
+                <div id="header" style="height: 48px; width: 100%;">
+                    <div id="title" style="line-height: 48px; font-size: 24px; width: 100%; text-align: center">
+                        Who Booked Massage?
+                    </div>
+                    <div id="logo" style="margin-top: 6px; width: 100%;">
+                        <img src="../img/icon/massage512.png" style="margin-left: auto; margin-right: auto; display: block" height="36px" width="36px">
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 55px"/>
+            <div id="options" style="margin-top: 20px; margin-bottom: 10px; padding-left: 13px; padding-right: 13px">
+                <div id="show-in-table" style="height: 24px; width: 100%">
+                    <div class="form-check form-switch" style="padding-left: 5px">
+                        <label class="form-check-label">Show alias inside the table</label>
+                        <input class="form-check-input switch-input" type="checkbox" id="show-in-table-switch" style="float: right; margin-top: 0px" checked/>
+                    </div>
+                </div>
+                <div id="show-in-popup" style="height: 24px; width: 100%; margin-top: 15px">
+                    <div class="form-check form-switch" style="padding-left: 5px">
+                        <label class="form-check-label">Show alias in the popup</label>
+                        <input class="form-check-input switch-input" type="checkbox" id="show-in-popup-switch" style="float: right; margin-top: 0px" checked/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="vendor/mdb.min.js"></script>
+        <script src="vendor/jquery.min.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "name": "Who Booked Massage",
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "description": "Who booked the massage service?",
+    "homepage_url": "https://github.com/zhangyazhong/WhoBookedMassage",
+    "permissions": [
+        "cookies", "storage"
+    ],
+    "browser_action": {
+        "default_icon": "img/icon/massage512.png",
+        "default_title": "Who Booked Massage",
+        "default_popup": "src/popup.html"
+    },
+    "icons": {
+          "16": "img/icon/massage512.png",
+          "48": "img/icon/massage512.png",
+          "128": "img/icon/massage512.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://microsoft.stargym.com.cn/*"],
+            "css": ["src/vendor/all.min.css", "src/vendor/fonts.googleapis.css", "src/vendor/mdb.min.css"],
+            "js": ["src/vendor/mdb.min.js", "src/vendor/jquery.min.js", "src/startup.js"]
+        }
+    ]
+}

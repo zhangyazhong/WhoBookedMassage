@@ -51,6 +51,7 @@ $(function() {
                     'tooltip': new mdb.Tooltip($(this)[0], { title: 'Reserved for ' + eventObj.alias, trigger: 'manual' })
                 });
             });
+            
             $('.chip.cbrd').mouseenter(function(e) {
                 let element = $(e.target);
                 while (!element.hasClass('chip') || !element.hasClass('cbrd')) {
@@ -112,7 +113,6 @@ function getPropertyFromEventRaw(eventRaw, property) {
     return valueRaw.match(valueRegex)[0];
 }
 
-function getAliasFromEmail(email)
-{
+function getAliasFromEmail(email) {
     return email.split('@')[0];
 }
